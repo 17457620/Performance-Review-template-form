@@ -1,0 +1,144 @@
+<!--17457620 Group Project (SEF)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Performance Review Template</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script type="text/javascript" src="functions2.js"></script>
+</head>
+<body>
+    <h1>Employee Performance Review</h1>
+    <form id="PR1" method="post" action="https://www.somewhereonline123.com.au" onsubmit="return checkForm(this);">
+
+        <div class="form-element">
+            <span id="form-error" style="color: red; display: none; font-size:40px;"> All fields are required </span>
+          </div>
+
+    <div class="review-section">
+        <h2>Employee Information</h2>
+        <label for="name"> <strong> Name </strong></label> <input type="text" name="name" id="name" placeholder="e.g. Bob Smith" onblur="checkName(this);">
+        <span id="nameError" style="color: red; display: none;"></span> <br>
+        <label for="employeeID"> <strong> EmployeeID </strong></label> <input type="number" name="employeeID" id="employeeID" placeholder="123" onblur="checkValue(this);">
+        <span id="employeeIDError" style="color: red; display: none;"></span> <br>
+        <label for="position"> <strong> Position </strong></label> <input type="text" name="position" id="position" onblur="checkPosition(this);">
+        <span id="positionError" style="color: red; display: none;"></span> <br>
+        <label for="reviewdate"> <strong> Date of Review </strong></label> <input type="date" name="reviewdate" id="reviewdate" onblur="checkRD(this);">
+        <span id="reviewdateError" style="color: red; display: none;"></span> <br>
+        <label for="reviewtime"> <strong> Time of Review </strong></label> <input type="time" name="reviewtime" id="reviewtime" onblur="checkRT(this);">
+        <span id="reviewtimeError" style="color: red; display: none;"></span> <br>
+    </div>
+
+    <div class="review-section">
+        <h2>Performance Evaluation</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Criteria</th>
+                    <th>Rating</th>
+                    <th>Comments (optional)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Job Knowledge</td>
+                    <td>
+                        <br>
+                        <label><input type="radio" name="job_knowledge" value="excellent"> Excellent</label><br>
+                        <label><input type="radio" name="job_knowledge" value="exceeds_expectations"> Exceeds Expectations</label><br>
+                        <label><input type="radio" name="job_knowledge" value="meets_expectations"> Meets Expectations</label><br>
+                        <label><input type="radio" name="job_knowledge" value="needs_improvement"> Needs Improvement</label><br>
+                        <label><input type="radio" name="job_knowledge" value="unacceptable"> Unacceptable</label><br>
+                        <span id="job_knowledgeError" style="color: red; display: none;"></span>
+                        <br>
+
+                    </td>
+                    <td><textarea name="job_knowledge_comment" rows="3" cols="40"></textarea></td>
+                </tr>
+
+
+                <tr>
+                    <td>Work Quality</td>
+                    <td>
+                        <label><input type="radio" name="work_quality" value="excellent"> Excellent</label><br>
+                        <label><input type="radio" name="work_quality" value="exceeds_expectations"> Exceeds Expectations</label><br>
+                        <label><input type="radio" name="work_quality" value="meets_expectations"> Meets Expectations</label><br>
+                        <label><input type="radio" name="work_quality" value="needs_improvement"> Needs Improvement</label><br>
+                        <label><input type="radio" name="work_quality" value="unacceptable"> Unacceptable</label><br>
+                        <span id="work_qualityError" style="color: red; display: none;"></span>
+                        <br>
+
+                    </td>
+                    <td><textarea name="work_quality_comment" rows="3" cols="40"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Initiative</td>
+                    <td>
+                        <label><input type="radio" name="initiative" value="excellent"> Excellent</label><br>
+                        <label><input type="radio" name="initiative" value="exceeds_expectations"> Exceeds Expectations</label><br>
+                        <label><input type="radio" name="initiative" value="meets_expectations"> Meets Expectations</label><br>
+                        <label><input type="radio" name="initiative" value="needs_improvement"> Needs Improvement</label><br>
+                        <label><input type="radio" name="initiative" value="unacceptable"> Unacceptable</label><br>
+                        <span id="initiativeError" style="color: red; display: none;"></span>
+                        <br>
+
+                    </td>
+                    <td><textarea name="initiative_comment" rows="3" cols="40"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Communication</td>
+                    <td>
+                        <label><input type="radio" name="communication" value="excellent"> Excellent</label><br>
+                        <label><input type="radio" name="communication" value="exceeds_expectations"> Exceeds Expectations</label><br>
+                        <label><input type="radio" name="communication" value="meets_expectations"> Meets Expectations</label><br>
+                        <label><input type="radio" name="communication" value="needs_improvement"> Needs Improvement</label><br>
+                        <label><input type="radio" name="communication" value="unacceptable"> Unacceptable</label><br>
+                        <span id="communicationError" style="color: red; display: none;"></span>
+                        <br>
+
+                    </td>
+                    <td><textarea name="communication_comment" rows="3" cols="40"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Dependability</td>
+                    <td>
+                        <label><input type="radio" name="dependability" value="excellent"> Excellent</label><br>
+                        <label><input type="radio" name="dependability" value="exceeds_expectations"> Exceeds Expectations</label><br>
+                        <label><input type="radio" name="dependability" value="meets_expectations"> Meets Expectations</label><br>
+                        <label><input type="radio" name="dependability" value="needs_improvement"> Needs Improvement</label><br>
+                        <label><input type="radio" name="dependability" value="unacceptable"> Unacceptable</label><br>
+                        <span id="dependabilityError" style="color: red; display: none;"></span>
+                        <br>
+
+                    </td>
+                    <td><textarea name="dependability_comment" rows="3" cols="40"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="review-section">
+        <h2>Overall Feedback</h2>
+        <textarea name="overall_feedback" rows="5" cols="80"></textarea>
+    </div>
+
+    <br>
+
+    <div class="review-section">
+        <h2>Employee Response</h2>
+        <p>Feedback from employee</p>
+        <textarea name="employee_feedback" rows="5" cols="80"></textarea>
+    </div>
+    <br>
+
+    <input type="submit" value="Submit"> 
+    <span id="submitButtonError" style="color: red; display: none;">Please fill the required fields above.</span>
+    
+
+</form>
+
+    <br><br>
+
+</body>
+</html>
