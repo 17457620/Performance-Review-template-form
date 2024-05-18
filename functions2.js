@@ -193,5 +193,20 @@
             number.style.border = ""; // Reset border
         }
     }
+
+    function checkEmployeeID(inputElement) {
+        var errorMessageElement = inputElement.nextElementSibling; // Get the next sibling, which should be the error message element
+        
+        if (inputElement.value.trim() === '') {
+            inputElement.style.border = "3px solid red"; // Change border color to red
+            errorMessageElement.textContent = 'Please enter an emloyeeID'; // Set error message
+            errorMessageElement.style.color = 'red'; // Set error message color
+            errorMessageElement.style.display = 'inline'; // Show the error message
+        } else {
+            inputElement.style.border = ''; // Reset border color
+            errorMessageElement.textContent = ''; // Clear error message
+            errorMessageElement.style.display = 'none'; // Hide the error message
+        }
+    }
     
     
